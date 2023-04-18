@@ -4,32 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presenter.list.ListAddressFragment">
+    tools:context=".presenter.list.ListAddressFragment"
+    android:padding="8dp">
 
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.tsuryo.swipeablerv.SwipeableRecyclerView
         android:id="@+id/recyclerAddress"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:listitem="@layout/item_address"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:rightBgColor="@android:color/holo_red_light"
+        app:rightImage="@drawable/ic_delete"
+        app:textColor="@android:color/white"
+        app:textSize="20sp"
+        tools:listitem="@layout/item_address" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:clickable="true"
-        android:src="@drawable/ic_add"
-        android:contentDescription="TODO"
         android:backgroundTint="@color/color_primary"
-        app:tint="@color/white"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-      />
+        app:tint="@color/white" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_search"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:lottie_url="https://assets3.lottiefiles.com/packages/lf20_Y6YtJv.json" />
+
+    <TextView
+        android:id="@+id/text_not_found_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Nenhum endereço foi encontrado."
+        android:textSize="16sp"
+        android:fontFamily="@font/avenir_medium"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,8 @@
-package com.example.viacep.data.model
+package com.example.viacep.data.remote.model
 
 /**
  * Classe referencia á resposta de API
  */
-
 
 data class AddressResponse(
     val bairro: String?,

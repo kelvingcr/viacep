@@ -1,6 +1,6 @@
-package com.example.viacep.data.api
+package com.example.viacep.data.remote.api
 
-import com.example.viacep.data.model.AddressResponse
+import com.example.viacep.data.remote.model.AddressResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -12,8 +12,6 @@ import retrofit2.http.Path
  */
 
 interface ServiceApi {
-
     @GET("{cep}/json/")
     suspend fun getAddress(@Path("cep") cep: String) : AddressResponse
-
 }

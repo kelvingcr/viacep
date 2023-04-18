@@ -1,8 +1,8 @@
-package com.example.viacep.data.repository
+package com.example.viacep.data.remote.repository
 
-import com.example.viacep.data.api.ServiceApi
-import com.example.viacep.data.model.AddressResponse
-import com.example.viacep.domain.repository.AddressRepository
+import com.example.viacep.data.remote.api.ServiceApi
+import com.example.viacep.data.remote.model.AddressResponse
+import com.example.viacep.domain.api.repository.AddressRepository
 import javax.inject.Inject
 
 /**
@@ -15,7 +15,8 @@ import javax.inject.Inject
  */
 
                                                 //Dependende de ServiceApi
-class AddressRepositoryImpl @Inject constructor( private val serviceApi:ServiceApi ): AddressRepository {
+class AddressRepositoryImpl @Inject constructor( private val serviceApi: ServiceApi):
+    AddressRepository {
 
     override suspend fun getAddress(cep: String): AddressResponse {
        return serviceApi.getAddress(cep)

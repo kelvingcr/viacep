@@ -2,7 +2,9 @@ package com.example.viacep.presenter.search
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.viacep.domain.usecase.GetAddressUseCase
+import com.example.viacep.domain.local.usecase.InsertAddressUseCase
+import com.example.viacep.domain.model.Address
+import com.example.viacep.domain.api.usecase.GetAddressUseCase
 import com.example.viacep.util.StateView
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -21,13 +23,16 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class SearchViewModel @Inject constructor(private val getAddressUseCase: GetAddressUseCase)
+class SearchViewModel @Inject constructor(
+    private val getAddressUseCase: GetAddressUseCase,
+    private val insertAddressUseCase: InsertAddressUseCase)
     : ViewModel() {
 
     fun getAddress(cep: String) = liveData(Dispatchers.IO) {
         try {
             emit(StateView.Loading())
             val address = getAddressUseCase(cep)
+
             emit(StateView.Success(address))
 
         }catch (e: java.lang.Exception) {
@@ -36,4 +41,21 @@ class SearchViewModel @Inject constructor(private val getAddressUseCase: GetAddr
         }
 
     }
+
+    fun insertAddress(address: Address) = liveData(Dispatchers.IO) {
+        try {
+            emit(StateView.Loading())
+            val id = insertAddressUseCase(address)
+
+            emit(StateView.Success(id))
+
+        }catch (e: java.lang.Exception) {
+            e.printStackTrace()
+            emit(StateView.Error(e.message))
+        }
+
+    }
+
+
+
 }

@@ -6,6 +6,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
+/**
+ * Implementação padrão do Retrofit
+ */
 object ServiceProvider {
 
     private const val BASE_URL = "https://viacep.com.br/ws/"

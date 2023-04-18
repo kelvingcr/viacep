@@ -1,8 +1,8 @@
-package com.example.viacep.domain.usecase
+package com.example.viacep.domain.api.usecase
 
 import com.example.viacep.data.mapper.toDomain
 import com.example.viacep.domain.model.Address
-import com.example.viacep.domain.repository.AddressRepository
+import com.example.viacep.domain.api.repository.AddressRepository
 import javax.inject.Inject
 
 
@@ -16,9 +16,8 @@ class GetAddressUseCase @Inject constructor(
 ) {
 
     /**
-     * Faça com que o Objeto GetAddressUseCase
-     * fosse usado como função "suspend operator fun invoke"
-     * "getAddressUseCase(cep)"
+        O operador invoke é um operador padrão em Kotlin que é usado para chamar uma instância de classe como se fosse uma função.
+        getAllAddressUseCase.invoke()
      */
 
     suspend operator fun invoke(cep: String): Address {
