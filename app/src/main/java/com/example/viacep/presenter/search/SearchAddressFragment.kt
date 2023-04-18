@@ -20,6 +20,9 @@ import com.example.viacep.presenter.list.ListViewModel
 import com.example.viacep.util.Constants
 import com.example.viacep.util.StateView
 import com.example.viacep.util.hideKeyboard
+import com.example.viacep.util.setupTapTargetView
+import com.getkeepsafe.taptargetview.TapTarget
+import com.getkeepsafe.taptargetview.TapTargetView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -51,6 +54,8 @@ class SearchAddressFragment : Fragment() {
         /**Define o titulo da actionBar*/
         requireActivity().title = "Novo endereço"
         initListeners()
+
+        setupTapTargetView(binding.editCep, getString(R.string.title_first_step_target), getString(R.string.description_first_step_target))
     }
 
     private fun initListeners() {
@@ -98,6 +103,9 @@ class SearchAddressFragment : Fragment() {
                 }
                 is StateView.Success -> { /** Requisição bem-sucedida. */
                     if(stateView.data?.cep != null) { // Existe algum dado no "cep"?
+
+                        setupTapTargetView(binding.btnSave, getString(R.string.title_second_step_target), getString(R.string.description_second_step_target))
+
                         address = stateView.data
                         binding.btnSave.isEnabled = true
                         binding.itemAddress.viewFlipper.displayedChild = 1

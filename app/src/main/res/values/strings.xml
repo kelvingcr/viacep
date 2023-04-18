@@ -1,12 +1,20 @@
 <resources>
     <string name="app_name">ViaCEP</string>
 
-    <!--    SearchAddressFragment-->
+    <!--    Fragments   -->
     <string name="label_address_empty_search_address_fragment">Nenhum endereço encontrado\ncom o cep digitado.</string>
     <string name="label_enter_with_cep_search_address_fragment">Digite o CEP para obter o endereço</string>
     <string name="label_cep_search_address_fragment">01311300</string>
     <string name="text_button_save_search_address_fragment">Salvar</string>
     <string name="success_lottie_url">https://assets1.lottiefiles.com/packages/lf20_OMID2wcuSC.json</string>
     <string name="searching_lottie_url">https://assets3.lottiefiles.com/packages/lf20_Y6YtJv.json</string>
+
+    <!-- TapTargetView -->
+    <string name="title_new_address_target">Novo endereço</string>
+    <string name="description_new_address_target">Clique no botão para cadastrar.</string>
+    <string name="title_first_step_target">Passo 1.</string>
+    <string name="description_first_step_target">Digite o CEP para encontrarmos o endereço.</string>
+    <string name="title_second_step_target">Passo 2.</string>
+    <string name="description_second_step_target">Clique no botão para salvar o endereço.</string>
 
 </resources>

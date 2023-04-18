@@ -15,6 +15,7 @@ import com.example.viacep.databinding.FragmentListAddressBinding
 import com.example.viacep.domain.model.Address
 import com.example.viacep.presenter.list.adapter.AddressAdapter
 import com.example.viacep.util.StateView
+import com.example.viacep.util.setupTapTargetView
 import com.tsuryo.swipeablerv.SwipeLeftRightCallback
 import dagger.hilt.android.AndroidEntryPoint
 import okhttp3.internal.notify
@@ -61,6 +62,8 @@ class ListAddressFragment : Fragment() {
             initObserver()
             initListeners()
         }
+
+        setupTapTargetView(binding.fabAdd, getString(R.string.title_new_address_target), getString(R.string.description_new_address_target), targetRadius = 50)
     }
 
     private fun initListeners() {
