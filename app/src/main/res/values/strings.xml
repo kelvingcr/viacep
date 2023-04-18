@@ -6,5 +6,7 @@
     <string name="label_enter_with_cep_search_address_fragment">Digite o CEP para obter o endereço</string>
     <string name="label_cep_search_address_fragment">01311300</string>
     <string name="text_button_save_search_address_fragment">Salvar</string>
+    <string name="success_lottie_url">https://assets1.lottiefiles.com/packages/lf20_OMID2wcuSC.json</string>
+    <string name="searching_lottie_url">https://assets3.lottiefiles.com/packages/lf20_Y6YtJv.json</string>
 
 </resources>

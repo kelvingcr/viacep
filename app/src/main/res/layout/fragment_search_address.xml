@@ -23,7 +23,7 @@
             android:inputType="number"
             android:maxLength="8"
             android:padding="16dp"
-            android:textColorHint="#116E48EB"
+            android:textColorHint="@color/hint_color_to_edittext"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -62,7 +62,7 @@
             app:layout_constraintTop_toBottomOf="@+id/item_address"
             app:lottie_autoPlay="false"
             app:lottie_loop="false"
-            app:lottie_url="https://assets1.lottiefiles.com/packages/lf20_OMID2wcuSC.json" />
+            app:lottie_url="@string/success_lottie_url" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

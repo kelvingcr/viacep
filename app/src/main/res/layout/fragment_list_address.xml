@@ -49,7 +49,7 @@
         app:lottie_loop="false"
         android:visibility="gone"
         tools:visibility="visible"
-        app:lottie_url="https://assets3.lottiefiles.com/packages/lf20_Y6YtJv.json" />
+        app:lottie_url="@string/searching_lottie_url" />
 
     <TextView
         android:id="@+id/text_not_found_address"
