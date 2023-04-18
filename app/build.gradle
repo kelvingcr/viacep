@@ -79,5 +79,9 @@ dependencies {
     //Arrasta do Recycler
     implementation 'com.github.tsuryo:Swipeable-RecyclerView:1.1'
 
+    //Lottie, animações
     implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //Api SplashActivity
+    implementation("androidx.core:core-splashscreen:1.0.0")
 }
