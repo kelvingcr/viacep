@@ -12,13 +12,13 @@
         tools:layout="@layout/fragment_list_address" >
         <action
             android:id="@+id/action_listAddressFragment_to_searchAddressFragment"
-            app:destination="@id/searchAddressFragment" />
+            app:destination="@id/searchAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/fade_in" />
     </fragment>
-
     <fragment
         android:id="@+id/searchAddressFragment"
         android:name="com.example.viacep.presenter.search.SearchAddressFragment"
         android:label="fragment_search_address"
         tools:layout="@layout/fragment_search_address" />
-
 </navigation>
