@@ -52,18 +52,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottie_success"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnSave"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_address"
-            app:lottie_autoPlay="false"
-            app:lottie_loop="false"
-            app:lottie_url="@string/success_lottie_url" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -75,20 +75,7 @@ class SearchAddressFragment : Fragment() {
          */
         binding.btnSave.setOnClickListener {
             if(address != null) {
-                binding.lottieSuccess.playAnimation()
-                binding.lottieSuccess.addAnimatorListener(object : Animator.AnimatorListener {
-                    override fun onAnimationStart(p0: Animator) {}
-
-                    override fun onAnimationEnd(p0: Animator) {
-                        insertAddress(address!!)
-                    }
-                    override fun onAnimationCancel(p0: Animator) {}
-
-                    override fun onAnimationRepeat(p0: Animator) {}
-
-                })
-            } else {
-                findNavController().popBackStack()
+                insertAddress(address!!)
             }
         }
     }
@@ -132,6 +119,7 @@ class SearchAddressFragment : Fragment() {
         viewModel.insertAddress(address).observe(viewLifecycleOwner) { stateView ->
             when(stateView) {
                 is StateView.Loading -> {
+                    binding.btnSave.isEnabled = false
                 }
                 is StateView.Success -> {
                     listAddressViewModel.addressChanged()
