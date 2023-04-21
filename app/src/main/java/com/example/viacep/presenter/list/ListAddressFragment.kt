@@ -1,11 +1,14 @@
 package com.example.viacep.presenter.list
 
 import android.animation.Animator
+import android.content.Intent
+import android.net.Uri
 import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -114,7 +117,10 @@ class ListAddressFragment : Fragment() {
     }
 
     private fun initRecycler() {
-        addressAdapter = AddressAdapter()
+        addressAdapter = AddressAdapter() { address ->
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=${address.getFullAddress()}"))
+            startActivity(intent)
+        }
         with(binding.recyclerAddress) {//Parecido com o .apply
             adapter = addressAdapter
         }

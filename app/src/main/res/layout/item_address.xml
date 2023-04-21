@@ -10,6 +10,18 @@
     app:cardElevation="10dp"
     android:outlineSpotShadowColor="@color/color_primary">
 
+    <ImageView
+        android:id="@+id/img_routing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_routing"
+        android:background="@android:color/transparent"
+        app:tint="@color/blue"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
     <ViewFlipper
         android:id="@+id/view_flipper"
         android:layout_width="match_parent"
