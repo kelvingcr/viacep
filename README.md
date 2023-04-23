@@ -50,7 +50,7 @@ Faça o download da <a href="link aqui download">APK diretamente</a>. Você pode
   
 - Bibliotecas
   - [Hilt](https://github.com/googlecodelabs/android-hilt): Para injeção de dependencias automaticas.
-  - [Retrofit & OkHttp](https://developer.android.com/jetpack/androidx/releases/room): Para carregamento de imagens e cacheamento das mesmas.
+  - [Retrofit & OkHttp](https://square.github.io/retrofit/): Para carregamento de imagens e cacheamento das mesmas.
   - [Room DataBase](https://developer.android.com/jetpack/androidx/releases/room): Para carregamento de imagens e cacheamento das mesmas.
 
 ## Arquitetura
